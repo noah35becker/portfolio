@@ -1,11 +1,4 @@
 
-/* GENERAL */
-a{
-    text-decoration: none;
-}
-
-
-/* CONTACT */
 .contact-info a span{
     text-decoration: 1px solid underline;
 }
