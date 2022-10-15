@@ -1,9 +1,10 @@
 
 // IMPORTS
-// import './App.css';
+import './App.css';
 import Header from './components/Header';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
+import About from './components/subpages/About';
+import Portfolio from './components/subpages/Portfolio';
+import Resume from './components/subpages/Resume';
 
 
 // COMPONENT
@@ -14,6 +15,7 @@ function App() {
         <main>
             {/* <About /> */}
             {/* <Portfolio /> */}
+            <Resume />
         </main> 
     </>);
 }

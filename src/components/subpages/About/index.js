@@ -1,6 +1,6 @@
 
 // IMPORT
-import headshot from '../../assets/noah-becker-headshot.jpg';
+import headshot from '../../../assets/noah-becker-headshot.jpg';
 
 
 // COMPONENT
