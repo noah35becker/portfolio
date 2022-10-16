@@ -13,12 +13,12 @@ function Contact(){
 
     return (<>
         <div className="contact-info">
-            <a href={`mailto:${email}`} target='_blank'>
+            <a href={`mailto:${email}`} target='_blank' rel='noreferrer'>
                 <FontAwesomeIcon icon={faEnvelope}/>:&nbsp;
                 <span>{email}</span>
             </a>
 
-            <a href={`tel:${phone}`} target='_blank'>
+            <a href={`tel:${phone}`} target='_blank' rel='noreferrer'>
                 <FontAwesomeIcon icon={faPhoneFlip}/>:&nbsp;
                 <span>{formatPhone(phone)}</span>
             </a>

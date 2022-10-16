@@ -8,9 +8,9 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 function Footer(){
     return (
         <footer>
-            <div class='logos'>
+            <div className='logos'>
                 {links.map(({name, src, type, link}) => 
-                    <a className='logo' href={link} target='_blank'>
+                    <a className='logo' href={link} target='_blank' rel='noreferrer' key={name}>
                         {type === 'img' ?
                             <img src={src} alt={name} typeof={typeof src} />
                             :

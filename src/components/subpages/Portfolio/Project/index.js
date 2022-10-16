@@ -3,7 +3,7 @@
 function Project(){
     return (
         <div className="project">
-            <a href='' target='_blank'>
+            <a href='/' target='_blank' rel='noreferrer'>
                 <h3>Title</h3>
             </a>
 
@@ -11,7 +11,7 @@ function Project(){
                 {'SQL, Node (inc. Express), Handlebars'}
             </h5>
 
-            <a href='' target='_blank'>
+            <a href='/' target='_blank' rel='noreferrer'>
                 <img alt="Mad Libs project" src={require(`../../../../assets/project-imgs/${'mad-libs-redaction-unredaction.gif'}`)} />
             </a>
         </div>
