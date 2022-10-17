@@ -1,18 +1,22 @@
 
+// IMPORT
+import './index.css';
+
+
 // COMPONENT
-function Project(){
+function Project({name, src, languages, link, bkgdPosY}){
     return (
-        <div className="project">
-            <a href='/' target='_blank' rel='noreferrer'>
-                <h3>Title</h3>
+        <div className="project mx-sm-3 mb-4 d-flex flex-column align-items-center">
+            <a className='hover-opacity' href={src} target='_blank' rel='noreferrer'>
+                <h3>{name}</h3>
             </a>
 
-            <h5 className="coding-languages">
-                {'SQL, Node (inc. Express), Handlebars'}
+            <h5 className="languages fs-6 fst-italic">
+                {languages}
             </h5>
 
-            <a href='/' target='_blank' rel='noreferrer'>
-                <img alt="Mad Libs project" src={require(`../../../../assets/project-imgs/${'mad-libs-redaction-unredaction.gif'}`)} />
+            <a className='hover-opacity' href={link} target='_blank' rel='noreferrer' aria-label={name}>
+                <div className='img' style={{backgroundImage: `url(${src})`, backgroundPositionY: bkgdPosY}}></div>
             </a>
         </div>
     );

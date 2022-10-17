@@ -1,8 +1,37 @@
 
-body{
-    font-family: sans-serif;
+/* VARS */
+:root{
+    --dark-blue: rgb(113, 179, 195);
+    --light-blue: rgb(171, 211, 226);
+    --dark-orange: rgb(160, 67, 6);
+    --deep-champagne: rgb(242, 208, 139);
+    --transition: .2s;  
+}
+
+
+/* UTILITY CLASSES */
+
+.line-break{
+    display: block;
+    line-height: 1;
+}
+
+.hover-opacity{
+    transition: var(--transition) !important;
+}
+.hover-opacity:hover{
+    opacity: .6;
+}
+
+
+/* RULES */
+
+#root{
+    font-family:  'Nunito', sans-serif;
+    font-weight: 500;
+    background-image: radial-gradient(circle, var(--light-blue), var(--dark-blue));
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none !important;
 }

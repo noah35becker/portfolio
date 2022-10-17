@@ -10,6 +10,9 @@ import Portfolio from './components/subpages/Portfolio';
 import Resume from './components/subpages/Resume';
 import Contact from './components/subpages/Contact';
 
+import 'bootstrap';  // Bootstrap JS
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 
@@ -42,7 +45,7 @@ function App() {
             subpagesList={subpagesList}
         />
 
-        <main>
+        <main className='mx-5 text-center flex-grow-1'>
             {subpagesList.find(({name}) => name === subpage).frag}
         </main> 
 

@@ -1,7 +1,7 @@
 
 // IMPORT
 import Nav from "./Nav";
-
+import './index.css';
 
 // COMPONENT
 function Header({subpage, setSubpage, subpagesList}){
@@ -10,8 +10,8 @@ function Header({subpage, setSubpage, subpagesList}){
     }
 
     return (
-        <header>
-            <h1 subpage='about' onClick={selectPage}>Noah Becker</h1>
+        <header className="site-header d-flex mt-3 mb-4 pb-1 mx-4 justify-content-between align-items-center">
+            <h1 className="hover-opacity" subpage='about' onClick={selectPage}>Noah Becker</h1>
             <Nav
                 subpage={subpage}
                 subpagesList={subpagesList}

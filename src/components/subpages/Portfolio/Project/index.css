@@ -1,0 +1,18 @@
+
+.project .img{
+    background-size: cover;
+    border-radius: 10px;
+    width: 42vw;
+    height: 26vw;
+    min-width: 300px;
+    min-height: 200px;
+    max-width: 600px;
+    max-height: 400px;
+}
+
+@media screen and (max-width: 1000px){
+    .project .img{
+        width: 90vw;
+        height: 60vw;
+    }
+}

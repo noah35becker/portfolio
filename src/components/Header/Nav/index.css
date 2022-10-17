@@ -1,0 +1,13 @@
+
+.nav-link{
+    font-weight: 400 !important;
+}
+
+.nav-link.active{
+    color: var(--deep-champagne) !important;
+    font-family: sans-serif;
+    -webkit-text-stroke: 1px black;
+    letter-spacing: 1px;
+    font-size: calc(1.275rem + .3vw + 2px) !important;
+    transform: translateY(-2.5px) !important;
+}

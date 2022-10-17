@@ -1,0 +1,12 @@
+
+.site-header h1, nav ul li:not(.active){
+    cursor: pointer;
+}
+
+.site-header h1{
+    text-shadow: 1px 1px 30px white;
+}
+
+nav ul li.active{
+    cursor: default;
+}

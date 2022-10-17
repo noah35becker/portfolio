@@ -1,37 +1,34 @@
 
 // IMPORTS
 import links from '../../assets/footer-links';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import './index.css';
 
 
 // COMPONENT
 function Footer(){
     return (
-        <footer>
-            <div className='logos'>
-                {links.map(({name, src, type, link}) => 
-                    <a className='logo' href={link} target='_blank' rel='noreferrer' key={name}>
-                        {type === 'img' ?
-                            <img src={src} alt={name} typeof={typeof src} />
-                            :
-                            <FontAwesomeIcon icon={src} />
-                        }
+        <footer className='text-center mt-5 mb-3'>
+            <div className='logos mb-3'>
+                {links.map(({name, src, link}) => 
+                    <a className='logo mx-2 hover-opacity' href={link} target='_blank' rel='noreferrer' key={name}>
+                        <img src={src} alt={name} typeof={typeof src} />
                     </a>
                 )}
             </div>
 
-            <p>
-                Designed and coded by Noah Becker
+            <div>
+                <span className='border-end border-dark'>
+                    Designed and coded by Noah Becker
+                    &nbsp;
+                </span>
                 &nbsp;
-                <span></span>  {/* Add a left- (or right-) border here later */}
-                &nbsp;
-                &copy;
-                &nbsp;
+                &copy;&nbsp;
                 {new Date().getFullYear()}
-            </p>
+            </div>
         </footer>
     );
 }
+
 
 // EXPORT
 export default Footer;
