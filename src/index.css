@@ -34,8 +34,11 @@
 }
 
 a{
-    color: var(--dark-orange) !important; 
+    color: inherit !important;
     text-decoration: none !important;
+}
+a:not(.no-link-style):not(.btn){
+    color: var(--dark-orange) !important; 
 }
 
 .err-msg{

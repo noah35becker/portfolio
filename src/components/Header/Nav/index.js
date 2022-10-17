@@ -3,7 +3,6 @@
 import {useEffect} from 'react';
 import {capitalizeFirstLetter} from '../../../utils/helpers';
 import './index.css';
-import {Collapse} from 'bootstrap';
 
 
 // COMPONENT
@@ -28,17 +27,18 @@ function Nav({subpage, subpagesList, selectPage}){
                 <div className="collapse navbar-collapse rounded" id="navbarNav">
                     <ul className="navbar-nav">
                         {subpagesList.map(({name}) =>
-                            <li
-                                subpage={name}
-                                className={`nav-link fs-4 text-dark text-end text-sm-center ${name === subpage ? 'fw-bold active' : 'hover-opacity'}`}
-                                onClick={selectPage}
-                                data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show"
-                                aria-current={name === subpage ? 'page' : ''}
-                                key={name}
-                            >
-                                {capitalizeFirstLetter(name)}
-                            </li>
+                            <a className="no-link-style" href={`#${name}`} key={`${name}`}>
+                                <li
+                                    subpage={name}
+                                    className={`nav-link fs-4 text-dark text-end text-sm-center ${name === subpage ? 'fw-bold active' : 'hover-opacity'}`}
+                                    onClick={selectPage}
+                                    data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show"
+                                    aria-current={name === subpage ? 'page' : ''}
+                                >
+                                    {capitalizeFirstLetter(name)}
+                                </li>
+                            </a>
                         )}
                     </ul>
                 </div>
