@@ -1,4 +1,6 @@
 
+
+
 .nav-link{
     font-weight: 400 !important;
 }
@@ -10,4 +12,14 @@
     letter-spacing: 1px;
     font-size: calc(1.275rem + .3vw + 2px) !important;
     transform: translateY(-2.5px) !important;
+}
+
+
+@media screen and (max-width: 575px) {
+    .navbar-collapse{
+        position: absolute;
+        top: 60px;
+        background-color: var(--dark-blue);
+        padding: 0 10px;
+    }
 }

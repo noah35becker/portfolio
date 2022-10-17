@@ -3,6 +3,7 @@
 import {useEffect} from 'react';
 import {capitalizeFirstLetter} from '../../../utils/helpers';
 import './index.css';
+import {Collapse} from 'bootstrap';
 
 
 // COMPONENT
@@ -12,20 +13,27 @@ function Nav({subpage, subpagesList, selectPage}){
         [subpage]
     );
 
+    // function collapseMenu(){
+    //     const menuToggle = document.querySelector('#navbarNav');
+    //     Collapse(menuToggle, {toggle: false}).toggle();
+    // }
+
     return (
-        <nav className="navbar navbar-expand-lg">
-            <div className="container-fluid">
+        <nav className="navbar navbar-expand-sm">
+            <div className="container-fluid justify-content-end justify-content-sm-center">
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div className="collapse navbar-collapse rounded" id="navbarNav">
                     <ul className="navbar-nav">
                         {subpagesList.map(({name}) =>
                             <li
                                 subpage={name}
-                                className={`nav-link fs-4 text-dark ${name === subpage ? 'fw-bold active' : 'hover-opacity'}`}
+                                className={`nav-link fs-4 text-dark text-end text-sm-center ${name === subpage ? 'fw-bold active' : 'hover-opacity'}`}
                                 onClick={selectPage}
+                                data-bs-toggle="collapse"
+                                data-bs-target=".navbar-collapse.show"
                                 aria-current={name === subpage ? 'page' : ''}
                                 key={name}
                             >
