@@ -18,7 +18,7 @@ function Contact(){
     const [messageErrMsg, setMessageErrMsg] = useState('');
 
 
-    function validate({target}){
+    function isBlank({target}){
         target.value = target.value.trim();
         
         switch (target.name){
@@ -31,8 +31,6 @@ function Contact(){
             case 'email':
                 if (!target.value)
                     setEmailErrMsg("Don't leave blank");
-                else if (!validateEmail(target.value))
-                    setEmailErrMsg('Invalid email');
                 else
                     setEmailErrMsg('');
                 break;
@@ -43,6 +41,13 @@ function Contact(){
                     setMessageErrMsg('');
                 break;
         }
+    }
+
+    function isValidEmail({target}){
+        if (!validateEmail(target.value))
+            setEmailErrMsg('Invalid email');
+        else
+            setEmailErrMsg('');
     }
 
 
@@ -68,7 +73,7 @@ function Contact(){
                 <div>
                     <label className='form-label' htmlFor="name">Name:&nbsp;</label>
                     <input
-                        className='form-control mb-1' name="name" id='contact-name' placeholder="First Last" onBlur={validate}
+                        className='form-control mb-1' name="name" id='contact-name' placeholder="First Last" onChange={isBlank}
                         style={nameErrMsg ? {outlineStyle: 'solid'} : {}}
                     />
                     <div className='err-msg d-block mb-2'>{nameErrMsg || <>&nbsp;</>}</div>
@@ -77,7 +82,7 @@ function Contact(){
                 <div>
                     <label className='form-label' htmlFor="email">Email:&nbsp;</label>
                     <input
-                        className='form-control mb-1' name="email" id='contact-email' placeholder="email@website.com" onBlur={validate}
+                        className='form-control mb-1' name="email" id='contact-email' placeholder="email@website.com" onChange={isBlank} onBlur={isValidEmail}
                         style={emailErrMsg ? {outlineStyle: 'solid'} : {}}
                         />
                     <div className='err-msg d-block mb-2'>{emailErrMsg || <>&nbsp;</>}</div>
@@ -86,7 +91,7 @@ function Contact(){
                 <div>
                     <label className='form-label' htmlFor="message">Message:&nbsp;</label>
                     <textarea
-                        className='form-control mb-1' name="message" id='contact-message' placeholder='Hi, Noah…' rows='10' onBlur={validate}
+                        className='form-control mb-1' name="message" id='contact-message' placeholder='Hi, Noah…' rows='10' onChange={isBlank}
                         style={messageErrMsg ? {outlineStyle: 'solid'} : {}}
                     />
                     <div className='err-msg d-block mb-2'>{messageErrMsg || <>&nbsp;</>}</div>
