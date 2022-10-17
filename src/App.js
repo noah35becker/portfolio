@@ -45,7 +45,7 @@ function App() {
             subpagesList={subpagesList}
         />
 
-        <main className='mx-5 text-center flex-grow-1'>
+        <main className='mx-3 mx-md-4 mx-lg-5 text-center flex-grow-1'>
             {subpagesList.find(({name}) => name === subpage).frag}
         </main> 
 

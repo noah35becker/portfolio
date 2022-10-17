@@ -20,6 +20,6 @@
         position: absolute;
         top: 60px;
         background-color: var(--dark-blue);
-        padding: 0 10px;
+        padding: 0 15px 0 25px;
     }
 }

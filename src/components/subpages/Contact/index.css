@@ -3,6 +3,11 @@
     line-height: 2 !important;
 }
 
+.contact-info span{
+    display: inline-block;
+    white-space: nowrap;
+}
+
 .contact-info a span svg{
     padding-right: 2px;
 }
@@ -18,12 +23,12 @@
 }
 
 #contact-form input{
-    width: 350px;
+    width: 28vw;
     min-width: 250px;
 }
 
 #contact-form textarea{
-    width: 500px;
+    width: 35vw;
     min-width: 300px;
 }
 
@@ -37,4 +42,11 @@
     border-color: rgb(29, 144, 19) !important;
     color: rgb(29, 144, 19) !important;
     background-color: white !important;
+}
+
+
+@media screen and (max-width: 575px){
+    .contact-info a{
+        font-size: 18px !important;
+    }   
 }

@@ -9,7 +9,7 @@ function About(){
     return (<>
         <img className='headshot mb-4' src={headshot} alt='headshot' />
 
-        <p className="bio text-start mx-5">   
+        <p className="bio text-start mx-1 mx-sm-2 mx-md-5 px-lg-5">   
             <span className='fw-bold'>{'Noah Becker'}</span>{' is a professional computer programmer based in Brooklyn, NY. In 2022, he graduated from Columbia University Engineering\'s Coding Bootcamp, prior to which he gained several years of experience as a self-taught programmer (specializing in web design and data processing).'}
             
             <span className="line-break"><br /></span>

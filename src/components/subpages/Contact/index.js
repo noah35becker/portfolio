@@ -56,26 +56,15 @@ function Contact(){
 
             if (name && email && message){
                 alert('Form submitted!\n' + '\nName: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+                e.target.reset();
             }
         }
     }
 
 
     return (
-        <div className='d-flex justify-content-center'>
-            <div className="contact-info mx-3 mt-3">
-                <a className='fs-5' href={`mailto:${email}`} target='_blank' rel='noreferrer'>
-                    <span className='text-dark'><FontAwesomeIcon icon={faEnvelope}/>:&nbsp;</span>
-                    <span className='link hover-opacity'>{email}</span>
-                </a>
-                <br />
-                <a className='fs-5' href={`tel:${phone}`} target='_blank' rel='noreferrer'>
-                    <span className='text-dark'><FontAwesomeIcon icon={faPhoneFlip}/>:&nbsp;</span>
-                    <span className='link hover-opacity'>{formatPhone(phone)}</span>
-                </a>
-            </div>
-
-            <form id="contact-form" className='d-flex flex-column align-items-center mx-3' onSubmit={submit}>
+        <div className='d-flex justify-content-center flex-wrap-reverse'>
+            <form id="contact-form" className='d-flex flex-column align-items-center mx-2 mx-4-lg' onSubmit={submit}>
                 <div>
                     <label className='form-label' htmlFor="name">Name:&nbsp;</label>
                     <input
@@ -105,6 +94,18 @@ function Contact(){
 
                 <button className='btn btn-submit fs-5' type='submit' form='contact-form'>Send</button>
             </form>
+
+            <div className="contact-info mx-2 mx-4-lg mt-md-3 mb-3 mb-md-0">
+                <a className='fs-5' href={`mailto:${email}`} target='_blank' rel='noreferrer'>
+                    <span className='text-dark'><FontAwesomeIcon icon={faEnvelope}/>:&nbsp;</span>
+                    <span className='link hover-opacity'>{email}</span>
+                </a>
+                <br />
+                <a className='fs-5' href={`tel:${phone}`} target='_blank' rel='noreferrer'>
+                    <span className='text-dark'><FontAwesomeIcon icon={faPhoneFlip}/>:&nbsp;</span>
+                    <span className='link hover-opacity'>{formatPhone(phone)}</span>
+                </a>
+            </div>
         </div>
     );
 }
