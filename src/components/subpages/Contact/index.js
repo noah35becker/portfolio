@@ -19,8 +19,6 @@ function Contact(){
 
 
     function isBlank({target}){
-        target.value = target.value.trim();
-        
         switch (target.name){
             case 'name':
                 if (!target.value)
@@ -42,6 +40,12 @@ function Contact(){
                 break;
         }
     }
+
+
+    function trimOnBlur({target}){
+        target.value = target.value.trim();
+    }
+
 
     function isValidEmail({target}){
         if (!validateEmail(target.value))
@@ -73,7 +77,7 @@ function Contact(){
                 <div>
                     <label className='form-label' htmlFor="name">Name:&nbsp;</label>
                     <input
-                        className='form-control mb-1' name="name" id='contact-name' placeholder="First Last" onChange={isBlank}
+                        className='form-control mb-1' name="name" id='contact-name' placeholder="First Last" onChange={isBlank} onBlur={trimOnBlur}
                         style={nameErrMsg ? {outlineStyle: 'solid'} : {}}
                     />
                     <div className='err-msg d-block mb-2'>{nameErrMsg || <>&nbsp;</>}</div>
@@ -82,7 +86,7 @@ function Contact(){
                 <div>
                     <label className='form-label' htmlFor="email">Email:&nbsp;</label>
                     <input
-                        className='form-control mb-1' name="email" id='contact-email' placeholder="email@website.com" onChange={isBlank} onBlur={isValidEmail}
+                        className='form-control mb-1' name="email" id='contact-email' placeholder="email@website.com" onChange={isBlank} onBlur={e => {trimOnBlur(e); isValidEmail(e);}}
                         style={emailErrMsg ? {outlineStyle: 'solid'} : {}}
                         />
                     <div className='err-msg d-block mb-2'>{emailErrMsg || <>&nbsp;</>}</div>
@@ -91,7 +95,7 @@ function Contact(){
                 <div>
                     <label className='form-label' htmlFor="message">Message:&nbsp;</label>
                     <textarea
-                        className='form-control mb-1' name="message" id='contact-message' placeholder='Hi, Noah…' rows='10' onChange={isBlank}
+                        className='form-control mb-1' name="message" id='contact-message' placeholder='Hi, Noah…' rows='10' onChange={isBlank} onBlur={trimOnBlur}
                         style={messageErrMsg ? {outlineStyle: 'solid'} : {}}
                     />
                     <div className='err-msg d-block mb-2'>{messageErrMsg || <>&nbsp;</>}</div>
