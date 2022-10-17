@@ -33,16 +33,16 @@ export default [
         link: 'https://github.com/noah35becker/social-network-api'
     },
     {
-        name: 'Work Day Scheduler',
-        src: workDayScheduler,
-        languages: 'Javascript, CSS, HTML',
-        link: 'https://github.com/noah35becker/work-day-scheduler'
-    },
-    {
         name: 'Random Password Generator',
         src: randomPasswordGenerator,
         languages: 'JavaScript, CSS, HTML',
         bkgdPosY: '63%',
         link: 'https://github.com/noah35becker/random-password-generator'
+    },
+    {
+        name: 'Work Day Scheduler',
+        src: workDayScheduler,
+        languages: 'Javascript, CSS, HTML',
+        link: 'https://github.com/noah35becker/work-day-scheduler'
     }
 ];
