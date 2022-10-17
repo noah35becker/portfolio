@@ -11,6 +11,12 @@
     text-decoration: 1px solid underline;
 }
 
+#contact-form input, #contact-form textarea{
+    outline-width: 2px;
+    outline-color: var(--error-red) !important;
+    outline-offset: 1px;
+}
+
 #contact-form input{
     width: 350px;
     min-width: 250px;

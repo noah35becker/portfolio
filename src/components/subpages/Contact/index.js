@@ -1,6 +1,6 @@
 
 // IMPORT
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope, faPhoneFlip} from '@fortawesome/free-solid-svg-icons';
 import './index.css';
@@ -24,13 +24,13 @@ function Contact(){
         switch (target.name){
             case 'name':
                 if (!target.value)
-                    setNameErrMsg("Don't leave name field blank");
+                    setNameErrMsg("Don't leave blank");
                 else
                     setNameErrMsg('');
                 break;
             case 'email':
                 if (!target.value)
-                    setEmailErrMsg("Don't leave email field blank");
+                    setEmailErrMsg("Don't leave blank");
                 else if (!validateEmail(target.value))
                     setEmailErrMsg('Invalid email');
                 else
@@ -38,7 +38,7 @@ function Contact(){
                 break;
             case 'message':
                 if (!target.value)
-                    setMessageErrMsg("Don't leave message field blank");
+                    setMessageErrMsg("Don't leave blank");
                 else
                     setMessageErrMsg('');
                 break;
@@ -46,7 +46,7 @@ function Contact(){
     }
 
 
-    function submit(e){  // FIX WHEN SUBMIT BUTTON IS CLICKED IMMEDIATELY
+    function submit(e){
         e.preventDefault();
 
         if (!nameErrMsg && !emailErrMsg && !messageErrMsg){
@@ -54,43 +54,59 @@ function Contact(){
             const email = document.getElementById('contact-email').value;
             const message = document.getElementById('contact-message').value;
 
-            alert('Form submitted!' + '\nName: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+            if (name && email && message){
+                alert('Form submitted!\n' + '\nName: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+            }
         }
     }
 
 
-    return (<>
-        <div className="contact-info">
-            <a className='fs-5' href={`mailto:${email}`} target='_blank' rel='noreferrer'>
-                <span className='text-dark'><FontAwesomeIcon icon={faEnvelope}/>:&nbsp;</span>
-                <span className='link hover-opacity'>{email}</span>
-            </a>
-            <br />
-            <a className='fs-5' href={`tel:${phone}`} target='_blank' rel='noreferrer'>
-                <span className='text-dark'><FontAwesomeIcon icon={faPhoneFlip}/>:&nbsp;</span>
-                <span className='link hover-opacity'>{formatPhone(phone)}</span>
-            </a>
+    return (
+        <div className='d-flex justify-content-center'>
+            <div className="contact-info mx-3 mt-3">
+                <a className='fs-5' href={`mailto:${email}`} target='_blank' rel='noreferrer'>
+                    <span className='text-dark'><FontAwesomeIcon icon={faEnvelope}/>:&nbsp;</span>
+                    <span className='link hover-opacity'>{email}</span>
+                </a>
+                <br />
+                <a className='fs-5' href={`tel:${phone}`} target='_blank' rel='noreferrer'>
+                    <span className='text-dark'><FontAwesomeIcon icon={faPhoneFlip}/>:&nbsp;</span>
+                    <span className='link hover-opacity'>{formatPhone(phone)}</span>
+                </a>
+            </div>
+
+            <form id="contact-form" className='d-flex flex-column align-items-center mx-3' onSubmit={submit}>
+                <div>
+                    <label className='form-label' htmlFor="name">Name:&nbsp;</label>
+                    <input
+                        className='form-control mb-1' name="name" id='contact-name' placeholder="First Last" onBlur={validate}
+                        style={nameErrMsg ? {outlineStyle: 'solid'} : {}}
+                    />
+                    <div className='err-msg d-block mb-2'>{nameErrMsg || <>&nbsp;</>}</div>
+                </div>
+
+                <div>
+                    <label className='form-label' htmlFor="email">Email:&nbsp;</label>
+                    <input
+                        className='form-control mb-1' name="email" id='contact-email' placeholder="email@website.com" onBlur={validate}
+                        style={emailErrMsg ? {outlineStyle: 'solid'} : {}}
+                        />
+                    <div className='err-msg d-block mb-2'>{emailErrMsg || <>&nbsp;</>}</div>
+                </div>
+
+                <div>
+                    <label className='form-label' htmlFor="message">Message:&nbsp;</label>
+                    <textarea
+                        className='form-control mb-1' name="message" id='contact-message' placeholder='Hi, Noah…' rows='10' onBlur={validate}
+                        style={messageErrMsg ? {outlineStyle: 'solid'} : {}}
+                    />
+                    <div className='err-msg d-block mb-2'>{messageErrMsg || <>&nbsp;</>}</div>
+                </div>
+
+                <button className='btn btn-submit fs-5' type='submit' form='contact-form'>Send</button>
+            </form>
         </div>
-
-        <form id="contact-form" className='d-flex flex-column align-items-center mt-3' onSubmit={submit}>
-            <div>
-                <label className='form-label' htmlFor="name">Name:&nbsp;</label>
-                <input className='form-control mb-4' name="name" id='contact-name' placeholder="First Last" onBlur={validate} />
-            </div>
-
-            <div>
-                <label className='form-label' htmlFor="email">Email:&nbsp;</label>
-                <input className='form-control mb-4' name="email" id='contact-email' placeholder="email@website.com" onBlur={validate} />
-            </div>
-
-            <div>
-                <label className='form-label' htmlFor="message">Message:&nbsp;</label>
-                <textarea className='form-control mb-4' name="message" id='contact-message' placeholder='Hi, Noah…' rows='10' onBlur={validate} />
-            </div>
-
-            <button className='btn btn-submit fs-5' type='submit' form='contact-form'>Send</button>
-        </form>
-    </>);
+    );
 }
 
 
