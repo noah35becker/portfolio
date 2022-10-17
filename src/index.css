@@ -3,7 +3,7 @@
 :root{
     --dark-blue: rgb(113, 179, 195);
     --light-blue: rgb(171, 211, 226);
-    --dark-orange: rgb(160, 67, 6);
+    --dark-orange: rgb(189, 80, 7);
     --deep-champagne: rgb(242, 208, 139);
     --error-red: rgb(154, 0, 0);
     --transition: .2s;  
@@ -34,6 +34,7 @@
 }
 
 a{
+    color: var(--dark-orange) !important; 
     text-decoration: none !important;
 }
 

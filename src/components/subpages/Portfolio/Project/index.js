@@ -6,8 +6,8 @@ import './index.css';
 // COMPONENT
 function Project({name, src, languages, link, bkgdPosY}){
     return (
-        <div className="project mx-sm-3 mb-4 d-flex flex-column align-items-center">
-            <a className='hover-opacity' href={src} target='_blank' rel='noreferrer'>
+        <div className="project mx-sm-3 mb-5 d-flex flex-column align-items-center">
+            <a className='project-title hover-opacity' href={link} target='_blank' rel='noreferrer'>
                 <h3>{name}</h3>
             </a>
 

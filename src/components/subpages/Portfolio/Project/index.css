@@ -1,4 +1,8 @@
 
+.project-title h3{
+    text-shadow: 1px 1px 20px white;
+}
+
 .project .img{
     background-size: cover;
     border-radius: 10px;
