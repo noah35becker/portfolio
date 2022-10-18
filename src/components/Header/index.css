@@ -1,4 +1,8 @@
 
+.site-header{
+    z-index: 999;
+}
+
 .site-header h1, nav ul li:not(.active){
     cursor: pointer;
 }
