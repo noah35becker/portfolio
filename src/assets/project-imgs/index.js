@@ -18,7 +18,7 @@ export default [
     {
         name: 'Astrosounds',
         src: astrosounds,
-        languages: 'JavaScript, HTML, CSS,  third-party APIs',
+        languages: 'JavaScript, HTML, CSS, third-party APIs',
         githubLink: 'https://github.com/noah35becker/astrosounds',
         deployedLink: 'https://noah35becker.github.io/astrosounds/'
     },
@@ -46,7 +46,7 @@ export default [
     {
         name: 'Work Day Scheduler',
         src: workDayScheduler,
-        languages: 'Javascript, CSS, HTML',
+        languages: 'JavaScript, CSS, HTML',
         githubLink: 'https://github.com/noah35becker/work-day-scheduler',
         deployedLink: 'https://noah35becker.github.io/work-day-scheduler/'
     }
