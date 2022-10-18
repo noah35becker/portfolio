@@ -35,7 +35,7 @@ function App() {
             frag: <Contact />
         }
     ];
-    const [subpage, setSubpage] = useState(location.hash.substring(1) || subpagesList[0].name);
+    const [subpage, setSubpage] = useState(window.location.hash.substring(1) || subpagesList[0].name);
 
     return (<>
         <Header

@@ -12,11 +12,6 @@ function Nav({subpage, subpagesList, selectPage}){
         [subpage]
     );
 
-    // function collapseMenu(){
-    //     const menuToggle = document.querySelector('#navbarNav');
-    //     Collapse(menuToggle, {toggle: false}).toggle();
-    // }
-
     return (
         <nav className="navbar navbar-expand-sm">
             <div className="container-fluid justify-content-end justify-content-sm-center">

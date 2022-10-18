@@ -5,7 +5,7 @@ import './index.css';
 
 // COMPONENT
 function Resume(){
-    const googleDriveFileId = '1mnz1VOuWdmTKZJca94afjFtpAFiVcPde';
+    const googleDriveFileId = '1H3LGu6BTjFvgfockT1g3OkoE6CSNsRdN';
 
     return (<>
         <a className="btn download-btn fs-5 mb-3" href={`https://drive.google.com/uc?export=download&id=${googleDriveFileId}`} download>Download</a>
