@@ -6,7 +6,8 @@
     --dark-orange: rgb(189, 80, 7);
     --deep-champagne: rgb(242, 208, 139);
     --error-red: rgb(185, 0, 0);
-    --transition: .2s;  
+    --transition: .2s;
+    --hover-opacity: .6;
 }
 
 
@@ -21,7 +22,7 @@
     transition: var(--transition) !important;
 }
 .hover-opacity:hover{
-    opacity: .6;
+    opacity: var(--hover-opacity);
 }
 
 

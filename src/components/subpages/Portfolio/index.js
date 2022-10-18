@@ -1,20 +1,24 @@
 
 // IMPORTS
+import {useState} from 'react';
 import Project from './Project';
 import projects from '../../../assets/project-imgs';
 
 
 // COMPONENT
 function Portfolio(){
+
     return (
         <div className='d-flex flex-wrap justify-content-around'>
-            {projects.map(({name, src, languages, link, bkgdPosY = ''}) =>
+            {projects.map(({name, src, languages, githubLink, deployedLink = '', bkgdPosY = ''}, index) =>
                 <Project
                     name={name}
                     src={src}
                     languages={languages}
-                    link={link}
+                    githubLink={githubLink}
+                    deployedLink={deployedLink}
                     bkgdPosY={bkgdPosY}
+                    tabIndex={index + 1}
                     key={name}
                 />
             )}    

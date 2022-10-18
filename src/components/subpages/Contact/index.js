@@ -108,12 +108,12 @@ function Contact(){
 
             <div className="contact-info grey-bkgd mx-2 mx-4-lg mb-3 mb-md-0">
                 <a className='fs-5' href={`mailto:${email}`} target='_blank' rel='noreferrer'>
-                    <span className='text-dark'><FontAwesomeIcon icon={faEnvelope}/>:&nbsp;</span>
+                    <span className='text-dark'><FontAwesomeIcon icon={faEnvelope} />:&nbsp;</span>
                     <span className='link hover-opacity'>{email}</span>
                 </a>
                 <br />
                 <a className='fs-5' href={`tel:${phone}`} target='_blank' rel='noreferrer'>
-                    <span className='text-dark'><FontAwesomeIcon icon={faPhoneFlip}/>:&nbsp;</span>
+                    <span className='text-dark'><FontAwesomeIcon icon={faPhoneFlip} />:&nbsp;</span>
                     <span className='link hover-opacity'>{formatPhone(phone)}</span>
                 </a>
             </div>

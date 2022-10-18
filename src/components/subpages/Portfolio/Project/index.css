@@ -1,9 +1,15 @@
 
 .project-title h3{
     text-shadow: 1px 1px 20px white;
+    color: var(--dark-orange);
+    cursor: pointer;
 }
 
-.project .img{
+.project-img-wrapper:focus{
+    outline: none;
+}
+
+.project-img{
     background-size: cover;
     border-radius: 10px;
     width: 42vw;
@@ -12,10 +18,46 @@
     min-height: 200px;
     max-width: 600px;
     max-height: 400px;
+    opacity: 1;
+    transition: .5s ease;
 }
 
+.transparent-mask{
+    opacity: calc(var(--hover-opacity) - .2);
+}
+
+.project-img-overlay{
+    transition: .5s ease-in-out;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    display: flex;
+    opacity: 0;
+}
+.project-img-overlay.clicked{
+    display: flex;
+    opacity: 1;
+    top: 50%;
+}
+
+.project-img-overlay a>.fa{
+    font-size: 100px;
+    color: black !important;
+    transition: var(--transition);
+    background-color: white;
+    border-radius: 50%;
+    height: .9em;
+    width: .9em;
+}
+.project-img-overlay a>.fa:hover{
+    color: var(--dark-orange) !important;
+}
+
+
 @media screen and (max-width: 1000px){
-    .project .img{
+    .project-img{
         width: 90vw;
         height: 60vw;
     }
