@@ -106,7 +106,7 @@ function Contact(){
                 <button className='btn btn-submit fs-5' type='submit' form='contact-form'>Send</button>
             </form>
 
-            <div className="contact-info grey-bkgd mx-2 mx-4-lg mb-3 mb-md-0">
+            <div className="contact-info grey-bkgd mx-2 mx-4-lg mb-3">
                 <a className='fs-5' href={`mailto:${email}`} target='_blank' rel='noreferrer'>
                     <span className='text-dark'><FontAwesomeIcon icon={faEnvelope} />:&nbsp;</span>
                     <span className='link hover-opacity'>{email}</span>

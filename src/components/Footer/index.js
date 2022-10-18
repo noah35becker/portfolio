@@ -1,6 +1,6 @@
 
 // IMPORTS
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';;
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import links from './links';
 import './index.css';
 
