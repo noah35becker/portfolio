@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.40794bd3.css",
-    "main.js": "/portfolio/static/js/main.ef0885ff.js",
+    "main.css": "/portfolio/static/css/main.eec67def.css",
+    "main.js": "/portfolio/static/js/main.261a1698.js",
     "static/media/mad-libs.gif": "/portfolio/static/media/mad-libs.e0e971dea6e731464cfd.gif",
     "static/media/astrosounds.png": "/portfolio/static/media/astrosounds.00b15c5fd56c28717f3d.png",
     "static/media/weather-dashboard.png": "/portfolio/static/media/weather-dashboard.be7b8f09d474d73c5c71.png",
@@ -10,11 +10,11 @@
     "static/media/random-password-generator.png": "/portfolio/static/media/random-password-generator.09a674f20e1f51f890ac.png",
     "static/media/noah-becker-headshot.jpg": "/portfolio/static/media/noah-becker-headshot.0d7291a88837b16b2432.jpg",
     "index.html": "/portfolio/index.html",
-    "main.40794bd3.css.map": "/portfolio/static/css/main.40794bd3.css.map",
-    "main.ef0885ff.js.map": "/portfolio/static/js/main.ef0885ff.js.map"
+    "main.eec67def.css.map": "/portfolio/static/css/main.eec67def.css.map",
+    "main.261a1698.js.map": "/portfolio/static/js/main.261a1698.js.map"
   },
   "entrypoints": [
-    "static/css/main.40794bd3.css",
-    "static/js/main.ef0885ff.js"
+    "static/css/main.eec67def.css",
+    "static/js/main.261a1698.js"
   ]
 }
