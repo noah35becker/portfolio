@@ -11,7 +11,7 @@ function Footer(){
         <footer className='text-center mt-5 mb-3'>
             <div className='logos mb-1'>
                 {links.map(({name, faIcon, link, color}) => 
-                    <a className='logo fs-2' href={link} target='_blank' rel='noreferrer' key={name}>
+                    <a className='logo' href={link} target='_blank' rel='noreferrer' key={name}>
                         <FontAwesomeIcon className='fa' icon={faIcon} style={{color}} />
                     </a>
                 )}
