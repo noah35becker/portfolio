@@ -1,4 +1,12 @@
 
-.logo img{
-    width: 25px;
+.logo{
+    padding: 0 15px;
+}
+
+.logo .fa{
+    transition: var(--transition);
+}
+
+.logo .fa:hover{
+    color: var(--dark-orange) !important;
 }

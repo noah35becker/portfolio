@@ -1,6 +1,7 @@
 
 // IMPORTS
-import links from '../../assets/footer-links';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';;
+import links from './links';
 import './index.css';
 
 
@@ -8,10 +9,10 @@ import './index.css';
 function Footer(){
     return (
         <footer className='text-center mt-5 mb-3'>
-            <div className='logos mb-3'>
-                {links.map(({name, src, link}) => 
-                    <a className='logo mx-2 hover-opacity' href={link} target='_blank' rel='noreferrer' key={name}>
-                        <img src={src} alt={name} typeof={typeof src} />
+            <div className='logos mb-1'>
+                {links.map(({name, faIcon, link, color}) => 
+                    <a className='logo fs-2' href={link} target='_blank' rel='noreferrer' key={name}>
+                        <FontAwesomeIcon className='fa' icon={faIcon} style={{color}} />
                     </a>
                 )}
             </div>
