@@ -1,4 +1,34 @@
 
+/* VARS */
+
+:root{
+    --almost-white: rgb(243, 243, 243);
+}
+
+
+/* RULES */
+
+.contact-wrapper{
+    align-items: start;
+}
+
+.grey-bkgd{
+    background-color: lightgrey;  /* fallback */
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: 1px solid grey;
+}
+.grey-bkgd:first-child{
+    background-image: linear-gradient(75deg, var(--deep-champagne), var(--almost-white));
+}
+.grey-bkgd:last-child{
+    background-image: linear-gradient(340deg, var(--deep-champagne), var(--almost-white));
+}
+
+.contact-info{
+    height: min-content;
+}
+
 .contact-info a{
     line-height: 2 !important;
 }
@@ -14,6 +44,7 @@
 
 .contact-info a span.link{
     text-decoration: 1px solid underline;
+    font-weight: bolder;
 }
 
 #contact-form input, #contact-form textarea{

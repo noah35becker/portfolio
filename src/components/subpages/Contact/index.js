@@ -48,10 +48,12 @@ function Contact(){
 
 
     function isValidEmail({target}){
-        if (!validateEmail(target.value))
-            setEmailErrMsg('Invalid email');
-        else
-            setEmailErrMsg('');
+        if (target.value){
+            if (!validateEmail(target.value))
+                setEmailErrMsg('Invalid email');
+            else
+                setEmailErrMsg('');
+        }
     }
 
 
@@ -72,12 +74,12 @@ function Contact(){
 
 
     return (
-        <div className='d-flex justify-content-center flex-wrap-reverse'>
-            <form id="contact-form" className='d-flex flex-column align-items-center mx-2 mx-4-lg' onSubmit={submit}>
+        <div className='contact-wrapper d-flex justify-content-center flex-wrap-reverse'>
+            <form id="contact-form" className='grey-bkgd d-flex flex-column align-items-center mx-2 mx-4-lg' onSubmit={submit}>
                 <div>
                     <label className='form-label' htmlFor="name">Name:&nbsp;</label>
                     <input
-                        className='form-control mb-1' name="name" id='contact-name' placeholder="First Last" onChange={isBlank} onBlur={trimOnBlur}
+                        className='form-control mb-1' name="name" id='contact-name' placeholder="First Last" onChange={isBlank} onBlur={e => {trimOnBlur(e); isBlank(e);}}
                         style={nameErrMsg ? {outlineStyle: 'solid'} : {}}
                     />
                     <div className='err-msg d-block mb-2'>{nameErrMsg || <>&nbsp;</>}</div>
@@ -86,7 +88,7 @@ function Contact(){
                 <div>
                     <label className='form-label' htmlFor="email">Email:&nbsp;</label>
                     <input
-                        className='form-control mb-1' name="email" id='contact-email' placeholder="email@website.com" onChange={isBlank} onBlur={e => {trimOnBlur(e); isValidEmail(e);}}
+                        className='form-control mb-1' name="email" id='contact-email' placeholder="email@website.com" onChange={isBlank} onBlur={e => {trimOnBlur(e); isBlank(e); isValidEmail(e);}}
                         style={emailErrMsg ? {outlineStyle: 'solid'} : {}}
                         />
                     <div className='err-msg d-block mb-2'>{emailErrMsg || <>&nbsp;</>}</div>
@@ -95,7 +97,7 @@ function Contact(){
                 <div>
                     <label className='form-label' htmlFor="message">Message:&nbsp;</label>
                     <textarea
-                        className='form-control mb-1' name="message" id='contact-message' placeholder='Hi, Noah…' rows='10' onChange={isBlank} onBlur={trimOnBlur}
+                        className='form-control mb-1' name="message" id='contact-message' placeholder='Hi, Noah…' rows='10' onChange={isBlank} onBlur={e => {trimOnBlur(e); isBlank(e);}}
                         style={messageErrMsg ? {outlineStyle: 'solid'} : {}}
                     />
                     <div className='err-msg d-block mb-2'>{messageErrMsg || <>&nbsp;</>}</div>
@@ -104,7 +106,7 @@ function Contact(){
                 <button className='btn btn-submit fs-5' type='submit' form='contact-form'>Send</button>
             </form>
 
-            <div className="contact-info mx-2 mx-4-lg mt-md-3 mb-3 mb-md-0">
+            <div className="contact-info grey-bkgd mx-2 mx-4-lg mb-3 mb-md-0">
                 <a className='fs-5' href={`mailto:${email}`} target='_blank' rel='noreferrer'>
                     <span className='text-dark'><FontAwesomeIcon icon={faEnvelope}/>:&nbsp;</span>
                     <span className='link hover-opacity'>{email}</span>
