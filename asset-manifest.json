@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.434eda54.css",
+    "main.js": "/portfolio/static/js/main.ecb4555d.js",
+    "static/media/astrosounds.png": "/portfolio/static/media/astrosounds.00b15c5fd56c28717f3d.png",
+    "static/media/weather-dashboard.png": "/portfolio/static/media/weather-dashboard.be7b8f09d474d73c5c71.png",
+    "static/media/mad-libs.gif": "/portfolio/static/media/mad-libs.3ed270ce088df6141c92.gif",
+    "static/media/social-network-api.gif": "/portfolio/static/media/social-network-api.0aded0c89e14040fd482.gif",
+    "static/media/work-day-scheduler.png": "/portfolio/static/media/work-day-scheduler.98d0d1ea15ac900853e3.png",
+    "static/media/random-password-generator.png": "/portfolio/static/media/random-password-generator.09a674f20e1f51f890ac.png",
+    "static/media/noah-becker-headshot.jpg": "/portfolio/static/media/noah-becker-headshot.0d7291a88837b16b2432.jpg",
+    "static/media/music-notes.png": "/portfolio/static/media/music-notes.aebb6226199a656c4db3.png",
+    "static/media/linkedin-logo.png": "/portfolio/static/media/linkedin-logo.ad3b7fb61819601ffe55.png",
+    "index.html": "/portfolio/index.html",
+    "main.434eda54.css.map": "/portfolio/static/css/main.434eda54.css.map",
+    "main.ecb4555d.js.map": "/portfolio/static/js/main.ecb4555d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.434eda54.css",
+    "static/js/main.ecb4555d.js"
+  ]
+}
