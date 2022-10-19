@@ -1,6 +1,6 @@
 
 // IMPORTS
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {capitalizeFirstLetter} from '../../../utils/helpers';
 import './index.css';
 
@@ -12,14 +12,34 @@ function Nav({subpage, subpagesList, selectPage}){
         [subpage]
     );
 
+    let [mobileNavOpen] = useState(false);
+
+    function clickOutsideMobileNavListener(e){
+        if (document.querySelector('.navbar-nav').contains(e.target)){
+            mobileNavOpen = false;
+            window.removeEventListener('click', clickOutsideMobileNavListener);
+        }
+        else if (!document.querySelector('.navbar-toggler').contains(e.target))
+            document.querySelector('.navbar-toggler').click();
+    }
+
+    function handleShowMobileNav(){
+        document.querySelector('.navbar-toggler').blur();
+        mobileNavOpen = !mobileNavOpen;
+        if (mobileNavOpen)
+            window.addEventListener('click', clickOutsideMobileNavListener);
+        else
+            window.removeEventListener('click', clickOutsideMobileNavListener);
+    }
+
     return (
         <nav className="navbar navbar-expand-sm">
             <div className="container-fluid justify-content-end justify-content-sm-center">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" tabIndex={-1} onClick={handleShowMobileNav} data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse rounded" id="navbarNav">
+                <div className="navbar-collapse collapse rounded" id="navbarNav" >
                     <ul className="navbar-nav">
                         {subpagesList.map(({name}) =>
                             <a className="no-link-style" href={`#${name}`} key={`${name}`}>
