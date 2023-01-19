@@ -8,11 +8,12 @@ import projects from '../../../assets/project-imgs';
 function Portfolio(){
     return (
         <div className='d-flex flex-wrap justify-content-around'>
-            {projects.map(({name, src, languages, githubLink, deployedLink = '', bkgdPosY = ''}, index) =>
+            {projects.map(({name, src, languages, desc, githubLink, deployedLink = '', bkgdPosY = ''}, index) =>
                 <Project
                     name={name}
                     src={src}
                     languages={languages}
+                    desc={desc}
                     githubLink={githubLink}
                     deployedLink={deployedLink}
                     bkgdPosY={bkgdPosY}

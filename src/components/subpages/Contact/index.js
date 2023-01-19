@@ -1,6 +1,6 @@
 
 // IMPORT
-import ContactForm from '../../ContactForm';
+import ContactForm from './ContactForm';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope, faPhoneFlip} from '@fortawesome/free-solid-svg-icons';
 import './index.css';

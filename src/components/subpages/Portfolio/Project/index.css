@@ -5,6 +5,10 @@
     cursor: pointer;
 }
 
+.project-desc{
+    font-size: 1.1rem !important;
+}
+
 .project-img-wrapper:focus{
     outline: none;
 }

@@ -30,7 +30,7 @@
 }
 
 p.submitting{
-    color: rgb(44, 44, 207);
+    color: var(--deep-blue);
 }
 
 p.submit-success{

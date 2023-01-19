@@ -1,7 +1,7 @@
 
 // IMPORT
 import {useState} from "react";
-import {validateEmail} from "../../utils/helpers";
+import {validateEmail} from '../../../../utils/helpers';
 import './index.css';
 import {sendForm} from '@emailjs/browser';
 

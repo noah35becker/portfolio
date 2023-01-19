@@ -9,7 +9,7 @@ import './index.css';
 
 
 // COMPONENT
-function Project({name, src, languages, githubLink, deployedLink, bkgdPosY, tabIndex}){
+function Project({name, src, languages, desc, githubLink, deployedLink, bkgdPosY, tabIndex}){
     const [clicked, setClicked] = useState(false);
 
 
@@ -40,6 +40,10 @@ function Project({name, src, languages, githubLink, deployedLink, bkgdPosY, tabI
             <div className='project-title hover-opacity' target='_blank' rel='noreferrer' onClick={() => {setClicked(!clicked); focusser(tabIndex);}}>
                 <h3>{name}</h3>
             </div>
+
+            <h5 className="project-desc">
+                {desc}
+            </h5>
 
             <h5 className="project-languages fs-6 fst-italic">
                 {languages}
