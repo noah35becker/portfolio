@@ -18,6 +18,7 @@ This is Noah Becker's professional coding portfolio, complete with a bio, work s
 - [React](https://reactjs.org)
 - [Bootstrap](https://getbootstrap.com/)
 - [Font Awesome](https://fontawesome.com/)
+- [EmailJS](https://www.emailjs.com/)
 
 
 ## Questions
