@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8ae4dd06.css",
-    "main.js": "/portfolio/static/js/main.096c888c.js",
+    "main.css": "/portfolio/static/css/main.f91da801.css",
+    "main.js": "/portfolio/static/js/main.09924c55.js",
     "static/media/mad-libs.gif": "/portfolio/static/media/mad-libs.e0e971dea6e731464cfd.gif",
     "static/media/astrosounds.png": "/portfolio/static/media/astrosounds.00b15c5fd56c28717f3d.png",
     "static/media/paw-shop.png": "/portfolio/static/media/paw-shop.6ea926049dac03ebf347.png",
@@ -10,11 +10,11 @@
     "static/media/noah-becker-headshot.jpg": "/portfolio/static/media/noah-becker-headshot.d46f6daa206678786ec8.jpg",
     "static/media/random-password-generator.png": "/portfolio/static/media/random-password-generator.09a674f20e1f51f890ac.png",
     "index.html": "/portfolio/index.html",
-    "main.8ae4dd06.css.map": "/portfolio/static/css/main.8ae4dd06.css.map",
-    "main.096c888c.js.map": "/portfolio/static/js/main.096c888c.js.map"
+    "main.f91da801.css.map": "/portfolio/static/css/main.f91da801.css.map",
+    "main.09924c55.js.map": "/portfolio/static/js/main.09924c55.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ae4dd06.css",
-    "static/js/main.096c888c.js"
+    "static/css/main.f91da801.css",
+    "static/js/main.09924c55.js"
   ]
 }
