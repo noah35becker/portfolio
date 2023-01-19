@@ -3,6 +3,7 @@
 import {useState} from "react";
 import {validateEmail} from "../../utils/helpers";
 import './index.css';
+import {sendForm} from '@emailjs/browser';
 
 
 
@@ -52,7 +53,7 @@ export default function ContactForm(){
     }
 
 
-    function submit(e){
+    async function submit(e){
         e.preventDefault();
 
         if (!nameErrMsg && !emailErrMsg && !messageErrMsg){
@@ -61,6 +62,12 @@ export default function ContactForm(){
             const message = document.getElementById('contact-message').value;
 
             if (name && email && message){
+                const sendEmailResult = await sendForm('service_u4yrgjf', 'template_f7yhb18', '#contact-form', 'fHtXi9Ei9B7U0f65w');
+                console.log(sendEmailResult);
+
+                // if (sendEmailResult.text === 'OK')
+
+
                 alert('Form submitted!\n' + '\nName: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
                 e.target.reset();
             }
