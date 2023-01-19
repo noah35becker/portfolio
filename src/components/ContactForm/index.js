@@ -9,9 +9,16 @@ import {sendForm} from '@emailjs/browser';
 
 // COMPONENT
 export default function ContactForm(){
+    const EMAILJS_SERVICE_ID = 'service_u4yrgjf';
+    const EMAILJS_TEMPLATE_ID = 'template_f7yhb18';
+    const EMAILJS_PUBLIC_API_KEY = 'fHtXi9Ei9B7U0f65w';
+
     const [nameErrMsg, setNameErrMsg] = useState('');
     const [emailErrMsg, setEmailErrMsg] = useState('');
     const [messageErrMsg, setMessageErrMsg] = useState('');
+
+    const [submitStatus, setSubmitStatus] = useState('unsubmitted');
+    const submitMsgDelay = 4000; // ms
 
 
     function isBlank({target}){
@@ -62,14 +69,24 @@ export default function ContactForm(){
             const message = document.getElementById('contact-message').value;
 
             if (name && email && message){
-                const sendEmailResult = await sendForm('service_u4yrgjf', 'template_f7yhb18', '#contact-form', 'fHtXi9Ei9B7U0f65w');
-                console.log(sendEmailResult);
+                setSubmitStatus('submitting');
+                
+                try{
+                    const sendEmailResult = await sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, '#contact-form', EMAILJS_PUBLIC_API_KEY);
 
-                // if (sendEmailResult.text === 'OK')
-
-
-                alert('Form submitted!\n' + '\nName: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
-                e.target.reset();
+                    if (sendEmailResult.text === 'OK'){
+                        setSubmitStatus('success');
+                        setTimeout(() => {
+                            setSubmitStatus('unsubmitted');
+                            e.target.reset();
+                        }, submitMsgDelay);
+                    }
+                } catch {
+                    setSubmitStatus('failure');
+                    setTimeout(() => {
+                        setSubmitStatus('unsubmitted');
+                    }, submitMsgDelay);
+                }
             }
         }
     }
@@ -104,7 +121,16 @@ export default function ContactForm(){
                 <div className='err-msg d-block mb-2'>{messageErrMsg || <>&nbsp;</>}</div>
             </div>
 
-            <button className='btn btn-submit fs-5' type='submit' form='contact-form'>Send</button>
+            {submitStatus === 'unsubmitted' ?
+                <button className='btn btn-submit fs-5' type='submit' form='contact-form'>Send</button>
+            : submitStatus === 'submitting' ?
+                <p className="submitting fs-5">Sending…</p>
+            : submitStatus === 'success' ?
+                <p className="submit-success fs-5">Sent! I'll get back to you ASAP.</p>
+            : // submitStatus === 'failure'
+                <p className="submit-failure fs-5">Your message did not send<br/>Please try resubmitting, or refresh the page</p>
+            }
+            
         </form>
     </>;
 }

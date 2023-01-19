@@ -1,4 +1,6 @@
 
+
+
 #contact-form input, #contact-form textarea{
     outline-width: 2px;
     outline-color: var(--error-red) !important;
@@ -19,10 +21,22 @@
     border-radius: 15px !important;
     border: 1px solid white !important;
     color: white !important;
-    background-color: rgb(29, 144, 19) !important;
+    background-color: var(--submit-green) !important;
 }
 .btn-submit:hover{
-    border-color: rgb(29, 144, 19) !important;
-    color: rgb(29, 144, 19) !important;
+    border-color: var(--submit-green) !important;
+    color: var(--submit-green) !important;
     background-color: white !important;
+}
+
+p.submitting{
+    color: rgb(44, 44, 207);
+}
+
+p.submit-success{
+    color: var(--submit-green);
+}
+
+p.submit-failure{
+    color: var(--error-red);
 }
