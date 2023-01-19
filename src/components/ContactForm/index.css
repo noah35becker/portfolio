@@ -1,0 +1,28 @@
+
+#contact-form input, #contact-form textarea{
+    outline-width: 2px;
+    outline-color: var(--error-red) !important;
+    outline-offset: 1px;
+}
+
+#contact-form input{
+    width: calc(15vw + 200px);
+    min-width: 250px;
+}
+
+#contact-form textarea{
+    width: calc(25vw + 200px);
+    min-width: 300px;
+}
+
+.btn-submit{
+    border-radius: 15px !important;
+    border: 1px solid white !important;
+    color: white !important;
+    background-color: rgb(29, 144, 19) !important;
+}
+.btn-submit:hover{
+    border-color: rgb(29, 144, 19) !important;
+    color: rgb(29, 144, 19) !important;
+    background-color: white !important;
+}
