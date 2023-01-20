@@ -14,7 +14,7 @@ function About(){
             
             <span className="line-break"><br /></span>
             
-            {`After briefly attending Northwestern University as an engineering major, Noah transferred to The New School in New York City, where he earned a BFA in Music Performance and continued his established career as a nationally- and internationally-touring saxophonist, clarinetist, composer and bandleader. Alongside his own music, he has worked as a music copyist for several composers (including Pulitzer Prize and Grammy winners), preparing digital sheet music based either on handwritten scores or transcribing directly from audio; and as a private music teacher, using a self-developed curriculum. He speaks English, Spanish, and Hebrew, and loves to read, run, and cook.`}
+            {`After attending Northwestern University as a mechanical engineering major, Noah transferred to The New School in New York City, where he earned a BFA in Music Performance and continued his established career as a nationally- and internationally-touring saxophonist, clarinetist, composer and bandleader. Alongside his own music, he has worked as a music copyist for several composers (including Pulitzer Prize and Grammy winners), preparing digital sheet music based either on handwritten scores or transcribing directly from audio; and as a private music teacher, using a self-developed curriculum. He speaks English, Spanish, and Hebrew, and loves to read, run, and cook.`}
         </p>
     </>);
 }
