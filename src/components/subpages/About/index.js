@@ -10,11 +10,15 @@ function About(){
         <img className='headshot mb-4' src={headshot} alt='headshot' />
 
         <p className="bio text-start mx-1 mx-sm-2 mx-md-5 px-lg-5">   
-            <span className='fw-bold'>{'Noah Becker'}</span>{` is a full-stack web developer based in Brooklyn, NY. In 2022, he graduated from Columbia University's Coding Bootcamp, prior to which he gained several years of experience as a self-taught web designer and data specialist. He is dedicated to the art of writing clear, efficient code. Also a professional musician, he combines his instincts for improvisation with high-level planning and organization to build applications that deliver an intuitive user experience. Colleagues recognize his sharp attention to detail; his patience, thoughtfulness, and precision when communicating with others; and his ability to think critically and break down problems into manageable steps, no matter how complex the project.`}
+            <span className='fw-bold'>{'Noah Becker'}</span>{` is a full-stack web developer based in New York City. As a graduate of Columbia University's Full-Stack Bootcamp, he offers extensive experience with Node, SQL, MongoDB, GraphQL, Express, React, JavaScript, HTML, CSS, and other languages and frameworks. Over nearly a decade of work experience in web development and data management, he has consistently united a creative approach with strong technical expertise to provide high-quality solutions to clients’ business challenges.`}
             
             <span className="line-break"><br /></span>
-            
-            {`After attending Northwestern University as a mechanical engineering major, Noah transferred to The New School in New York City, where he earned a BFA in Music Performance and continued his established career as a nationally- and internationally-touring saxophonist, clarinetist, composer and bandleader. Alongside his own music, he has worked as a music copyist for several composers (including Pulitzer Prize and Grammy winners), preparing digital sheet music based either on handwritten scores or transcribing directly from audio; and as a private music teacher, using a self-developed curriculum. He speaks English, Spanish, and Hebrew, and loves to read, run, and cook.`}
+
+            {`He is dedicated to the art of writing clear, efficient code, and combines improvisation with planning and organization to build applications that deliver an intuitive user experience. Colleagues recognize his sharp attention to detail; his patience, thoughtfulness, and precision when communicating with others; and his ability to think critically and break down problems into manageable steps, no matter how complex the project.`}
+
+            <span className="line-break"><br /></span>
+
+            {`After attending Northwestern University as a mechanical engineering major, Noah transferred to The New School in New York City, where he earned a BFA in Music Performance and continued his established career as a nationally- and internationally-touring saxophonist, clarinetist, composer and bandleader. He speaks English, Spanish, and Hebrew, and loves to read, run, and cook.`}
         </p>
     </>);
 }
