@@ -10,7 +10,7 @@ function About(){
         <img className='headshot mb-4' src={headshot} alt='headshot' />
 
         <p className="bio text-start mx-1 mx-sm-2 mx-md-5 px-lg-5">   
-            <span className='fw-bold'>{'Noah Becker'}</span>{` is a full-stack web developer based in New York City. As a graduate of Columbia University's Full-Stack Bootcamp, he offers extensive experience with Node, SQL, MongoDB, GraphQL, Express, React, JavaScript, HTML, CSS, and other languages and frameworks. Over nearly a decade of work experience in web development and data management, he has consistently united a creative approach with strong technical expertise to provide high-quality solutions to clients’ business challenges.`}
+            <span className='fw-bold'>{'Noah Becker'}</span>{` is a full-stack web developer based in New York City. A graduate of Columbia University's Full-Stack Bootcamp, he offers extensive experience with Node, SQL, MongoDB, GraphQL, Express, React, JavaScript, HTML, CSS, and other languages and frameworks. Over nearly a decade of work experience in web development and data management, he has combined strong technical expertise with a creative approach to provide high-quality solutions to clients’ business challenges.`}
             
             <span className="line-break"><br /></span>
 
